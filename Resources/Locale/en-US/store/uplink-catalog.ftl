@@ -112,6 +112,9 @@ uplink-freedom-implanter-desc = Get away from those nasty sec officers with this
 uplink-macro-bomb-implanter-name = Macro Bomb Implanter
 uplink-macro-bomb-implanter-desc = Inject this and on death you'll create a large explosion. Huge team casualty cost, use at own risk. Replaces internal micro bomb.
 
+uplink-uplink-implanter-name = Uplink Implanter
+uplink-uplink-implanter-desc = Stealthily order equipment without the need for a PDA. Swallow telecrystals to top up the uplink.
+
 # Bundles
 uplink-c20r-bundle-name = C-20r Bundle
 uplink-c20r-bundle-desc = Old faithful: The classic C-20r Submachine Gun, bundled with three magazines.
@@ -171,6 +174,9 @@ uplink-hot-potato-desc = Once activated, this time bomb can't be dropped - only 
 
 uplink-chimp-ammo-name = Box of 10 Omega Cartridges.
 uplink-chimp-ammo-desc = A box of 10 omega particle cartridges for the CHIMP. Omega particles inflict severe burns and cause anomalies to go supercritical.
+
+uplink-proximity-mine-name = Proximity Mine
+uplink-proximity-mine-desc = A mine disguised as a wet floor sign.
 
 # Armor
 uplink-chameleon-name = Chameleon Kit

@@ -44,21 +44,21 @@
     minimumPlayers: 15
   - type: BreakerFlipRule
 
-- type: entity
-  id: BureaucraticError
-  parent: BaseGameRule
-  noSpawn: true
-  components:
-  - type: StationEvent
-    startAnnouncement: station-event-bureaucratic-error-announcement
-    startAudio:
-      path: /Audio/Announcements/bureaucratic_error.ogg
-      params:
-        volume: -1
-    minimumPlayers: 25
-    weight: 5
-    duration: 1
-  - type: BureaucraticErrorRule
+# - type: entity
+#   id: BureaucraticError
+#   parent: BaseGameRule
+#   noSpawn: true
+#   components:
+#   - type: StationEvent
+#     startAnnouncement: station-event-bureaucratic-error-announcement
+#     startAudio:
+#       path: /Audio/Announcements/bureaucratic_error.ogg
+#       params:
+#         volume: -1
+#     minimumPlayers: 25
+#     weight: 5
+#     duration: 1
+#   - type: BureaucraticErrorRule
 
 - type: entity
   id: DiseaseOutbreak
@@ -209,11 +209,12 @@
   noSpawn: true
   components:
   - type: StationEvent
-    weight: 10
+    weight: 8
     startAnnouncement: station-event-solar-flare-start-announcement
     endAnnouncement: station-event-solar-flare-end-announcement
     startAudio:
       path: /Audio/Announcements/attention.ogg
+    minimumPlayers: 10
     duration: 120
     maxDuration: 240
   - type: SolarFlareRule
@@ -221,8 +222,8 @@
     affectedChannels:
     - Common
     - Service
-    lightBreakChancePerSecond: 0.0003
-    doorToggleChancePerSecond: 0.001
+    lightBreakChancePerSecond: 0.00003
+    doorToggleChancePerSecond: 0.0001
 
 - type: entity
   id: VentClog
@@ -252,6 +253,54 @@
     weight: 5
     duration: 60
   - type: VentCrittersRule
+    entries:
+    - id: MobMouse
+      amount: 4
+      maxAmount: 12
+    - id: MobMouse1
+      amount: 4
+      maxAmount: 12
+    - id: MobMouse2
+      amount: 4
+      maxAmount: 12
+
+- type: entity
+  id: MothroachesSpawn
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: StationEvent
+    earliestStart: 20
+    minimumPlayers: 15
+    weight: 4
+    duration: 60
+  - type: VentCrittersRule
+    entries:
+    - id: MobMothroach
+      amount: 2
+      maxAmount: 6
+
+- type: entity
+  id: SlimesSpawn
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: StationEvent
+    earliestStart: 20
+    minimumPlayers: 15
+    weight: 5
+    duration: 60
+  - type: VentCrittersRule
+    entries:
+      - id: MobAdultSlimesBlueAngry
+        amount: 6
+        maxAmount: 10
+      - id: MobAdultSlimesGreenAngry
+        amount: 6
+        maxAmount: 10
+      - id: MobAdultSlimesYellowAngry
+        amount: 6
+        maxAmount: 10
 
 # - type: entity
 #   id: SpiderSpawn
@@ -263,7 +312,11 @@
 #     minimumPlayers: 15
 #     weight: 5
 #     duration: 60
-#   - type: SpiderSpawnRule
+#   - type: VentCrittersRule
+#     entries:
+#       - id: MobGiantSpiderAngry
+#         amount: 4
+#         maxAmount: 8
 
 # - type: entity
 #   id: ZombieOutbreak
@@ -276,15 +329,15 @@
 #     duration: 1
 #   - type: ZombieRule
 
-# - type: entity
-#   id: LoneOpsSpawn
-#   parent: BaseGameRule
-#   noSpawn: true
-#   components:
-#   - type: StationEvent
-#     earliestStart: 55
-#     weight: 5
-#     minimumPlayers: 10
-#     reoccurrenceDelay: 25
-#     duration: 1
-#   - type: LoneOpsSpawnRule
+- type: entity
+  id: LoneOpsSpawn
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: StationEvent
+    earliestStart: 90
+    weight: 5
+    minimumPlayers: 10
+    reoccurrenceDelay: 25
+    duration: 1
+  - type: LoneOpsSpawnRule

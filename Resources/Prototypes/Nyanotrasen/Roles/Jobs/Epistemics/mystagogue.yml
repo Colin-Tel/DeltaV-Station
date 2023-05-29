@@ -8,7 +8,7 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: Epistemics
-      time: 18000
+      time: 43200
     - !type:OverallPlaytimeRequirement
       time: 72000
   icon: "ResearchDirector"
@@ -16,7 +16,7 @@
   requireAdminNotify: true
   canBeAntag: false
   whitelistRequired: true
-  supervisors: "the captain"
+  supervisors: job-supervisors-captain
   access:
   - Research
   - Command
@@ -42,6 +42,6 @@
     belt: BibleMystagogue
     id: MystaPDA
     ears: ClothingHeadsetAltMystagogue
-  innerclothingskirt: ClothingUniformJumpskirtColorWhite
+  innerclothingskirt: ClothingUniformJumpskirtMystagogue
   satchel: ClothingBackpackSatchelScienceFilled
   duffelbag: ClothingBackpackDuffelScienceFilled
